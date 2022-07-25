@@ -1,0 +1,52 @@
+@model LoginModel
+@{
+    Layout = "_Login";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.ProjectName | CCP</title>
+    @await Component.InvokeAsync("Notyf")
+    @* <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> *@
+    <link rel="stylesheet" type="text/css" href="~/css/style.css">
+</head>
+<body>
+    <div class="sidenav">
+        <div class="login-main-text">
+            <h2>ACC-RecordsBankOut</h2>
+            <p>WB2022-011 VER.1.0.0</p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="col-md-6 col-sm-12">
+            <div class="login-form">
+
+                <form asp-controller="Account" asp-action="Login">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="UserName" class="control-label"></label>
+                        <input asp-for="UserName" type="text" class="form-control" placeholder="User Name">
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-black ">Login</button>
+                        @* <button type="submit" class="btn btn-black" onclick="validateData()">Sw</button> *@
+                        <a type="button" asp-action="ReportDocDate" asp-controller="Report" class="btn btn-info">Report</a>
+                        @* <button type="submit" asp-controller="Report" asp-action="ReportDocDate" class="btn btn-info"
+                            class="formcontrol">Report</button> *@
+                    </div>
+                </form>
+
+            </div>
+        </div>
+</body>
+
+</html>

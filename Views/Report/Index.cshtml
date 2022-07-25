@@ -1,0 +1,150 @@
+@{
+   
+}
+<head> 
+    <style>
+        .bg-thead {
+            text-align: left;
+            background: #70b599;
+            color: #000
+        }
+
+        .th-font-color {
+            color: white
+        }
+    </style>
+</head>
+@await Component.InvokeAsync("Notyf")
+<div class="card">
+              <div class="card-header">
+                <h1 class="card-title">DashBoard (OT)</h1>
+                        <br>
+                        <br>                        
+                        <div class="col-lg-3 col-6">
+                            <!-- small card -->
+                            <div class="small-box bg-success">
+                            <div class="inner">
+                                <h3>สร้างเอกสาร</h3>
+
+                                <p>Create</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-file-pdf-o"></i>
+                            </div>
+                            <a href="#" class="small-box-footer">
+                                เลือกทำรายการ <i class="fas fa-arrow-circle-right"></i>
+                            </a>
+                            </div>
+                        </div>
+                        <br>                                 
+                        <form asp-controller="Report" asp-action="GetData"> 
+                            <div class="row">
+                                    <div class="col-md-1">
+                                        <label>โรงงาน :</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>สำนักงานใหญ่</label>
+                                    </div>
+                                    <div class="col-md-1">                                                       
+                                        <label>สถานะ :</label>  
+                                    </div>
+                                    <div class="col-md-2">                             
+                                        <div class="form-group">                                           
+                                            <form asp-controller="Report" asp-action="GetDropdown">
+                                                <select class="form-control" style="width: 100%;" name="ddl_status" onselect="">
+                                                        <option selected="selected">==กรุณาเลือก==</option>
+                                                        <option value="All">All</option>
+                                                        <option value="Wait">รออนุมัติ</option>
+                                                        <option value="Approve">อนุมัติ</option>
+                                                        <option value="NotApprove">ไม่อนุมัติ</option>                                
+                                                </select>                                           
+                                            </form>
+                                        </div> 
+                                    </div>
+                            </div>                                                       
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <i class="fa fa-calendar"></i>
+                                        <label>วันที่เริ่ม [วันที่ทำเอกสาร]</label>
+                                        <div class="input-group date">
+                                            <input name="startDate" type="date" class="form-control" value="">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <i class="fa fa-calendar"></i>
+                                        <label>ถึงวันที่ [วันที่ทำเอกสาร]</label>
+                                        <div class="input-group date">
+                                            <input name="endDate" type="date" class="form-control" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label for=""></label>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-block btn-info">ค้นหา</button>
+                                    </div>
+                                </div>                                                                
+                            </div>
+                        <</form>            
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example" class="table table-bordered table-striped">
+                  <thead class="bg-thead text-center th-font-color">
+                  <tr>
+                    <th>แผนก</th>
+                    <th>แท่นผลิต</th>
+                    <th>เวลา</th>
+                    <th>เวลารวม</th>
+                    <th>จำนวนคน</th>
+                    <th>รวมชั่วโมงทั้งหมด</th>
+                    <th>เอกสาร</th>
+                    <th>แก้ไขครั้งที่</th>
+                    <th>สถานะ</th>
+                    <th>แก้ไขเอกสาร</th>
+                    <th>อนุมัติ/แก้ไข</th>
+                    <th>ปริ้นเอกสาร</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    @for (int i = 0; i < 5; i++)
+                    {
+                         <tr>
+                        <td>แผนกIT (S6100)</td>
+                        <td>สำนักงาน</td>
+                        <td>17.15 - 19.15</td>
+                        <td>02:00</td>
+                        <td>2</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>อนุมัติ</td>
+                        <td>
+                            @* <a type="button" class="btn btn-block btn-outline-warning" Visible="False">แก้ไข</a> *@
+                        </td>
+                        <td>
+                            @* <a type="button" class="btn btn-block btn-outline-warning" Visible="False">แก้ไข</a> *@
+                        </td>
+                        <td>
+                            <a type="button" class="btn btn-block btn-outline-success" asp-area="" asp-controller="Report" asp-action="PrintDoc">ปริ้น</a>                             
+                        </td>
+                        </tr>   
+                    }
+                  </tbody>
+                  @* <tfoot>
+                  <tr>
+                    <th>Rendering engine</th>
+                    <th>Browser</th>
+                    <th>Platform(s)</th>
+                    <th>Engine version</th>
+                    <th>CSS grade</th>
+                  </tr>
+                  </tfoot> *@
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>

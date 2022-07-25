@@ -1,0 +1,318 @@
+@{
+
+
+}
+
+<head>
+    <style>
+        .bg-thead {
+            text-align: left;
+            background: #70b599;
+            color: #000
+        }
+
+        .th-font-color {
+            color: white
+        }
+    </style>
+</head>
+
+
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row">
+            @* <div class="col-md-6">
+                <label style="font-size:20px"></label>
+                </div> *@
+        </div>
+    </div><!-- /.container-fluid -->
+</section>
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="card card-olive">
+            <div class="card-header">
+                <h3 class="card-title">บันทึกขอทำโอที</h3>
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- /.card-header -->
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <span class="right badge badge-danger"><i class="fas fa-industry"></i></span>
+                                <label>แผนก</label>
+                                <select class="form-control select2" id="dropdown" style="width: 100%;">
+                                    <option selected="selected"></option>
+                                    <option>01</option>
+                                    @* <option disabled="disabled">California (disabled)</option> *@
+                                    <option>02</option>
+                                    <option>03</option>
+                                </select>
+                                <span class="text-danger"></span>
+                            </div>
+                        </div>
+                        <!-- /.form-group -->
+                        <div class="form-group">
+                            <span class="right badge badge-danger"><i class="fas fa-industry"></i></span>
+                            <label>แท่นผลิต</label>
+                            <select class="form-control select2" id="dropdown1"style="width: 100%;">
+                                <option selected="selected"></option>
+                                <option>01</option>
+                                @* <option disabled="disabled">California (disabled)</option> *@
+                                <option>02</option>
+                                <option>03</option>
+                            </select>
+                            <span class="text-danger"></span>
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Read ME :</label>
+                            <label style="color:gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores delectus voluptatibus ipsam soluta debitis, animi cupiditate obcaecati aliquam reiciendis eos similique accusantium fugit mollitia. Delectus aspernatur tempora dicta maxime at.</label>
+                        </div>
+
+
+                        <div class="form-group">
+
+                        </div>
+
+                        <!-- /.form-group -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-3">
+                        <div class="form-group">
+                            <span class="right badge badge-danger"><i class="fas fa-calendar-alt"></i></span>
+                            <label>วันที่ขอทำโอที</label>
+                            <div class="input-group date">
+                                <input type="date" class="form-control">
+                            </div>
+                            <span class="text-danger"></span>
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-12 col-sm-1">
+                        <div class="form-group">
+                            <span class="right badge badge-danger"><i class="fas fa-clock"></i></span>
+                            <label>เริ่ม</label>
+                            <select class="form-control select2bs4" style="width: 100%;">
+                                <option selected="selected">HR</option>
+                                <option>01</option>
+                                @* <option disabled="disabled">California (disabled)</option> *@
+                                <option>02</option>
+                                <option>03</option>
+                            </select>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-1">
+                        <div class="form-group">
+                            <label>.</label>
+                            <select class="form-control select2bs4" style="width: 100%;">
+                                <option selected="selected">MM</option>
+                                <option>01</option>
+                                @* <option disabled="disabled">California (disabled)</option> *@
+                                <option>02</option>
+                                <option>03</option>
+                            </select>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                   
+                    <div class="col-12 col-sm-1">
+                        <div class="form-group">
+                            <span class="right badge badge-danger"><i class="fas fa-clock"></i></span>
+                            <label>ถึง</label>
+                            <select class="form-control select2bs4" style="width: 100%;">
+                                <option selected="selected">HR</option>
+                                <option>01</option>
+                                @* <option disabled="disabled">California (disabled)</option> *@
+                                <option>02</option>
+                                <option>03</option>
+                            </select>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-1">
+                        <div class="form-group">
+                            <label>.</label>
+                            <select class="form-control select2bs4" style="width: 100%;">
+                                <option selected="selected">MM</option>
+                                <option>01</option>
+                                @* <option disabled="disabled">California (disabled)</option> *@
+                                <option>02</option>
+                                <option>03</option>
+                            </select>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-5">
+                        <div class="form-group">
+                            <label>รวมจำนวนโอทีที่ขอ</label>
+                            <input class="form-control" type="text" value="01:00:00 ชั่วโมง" readonly>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-12 col-sm-5">
+                        <div class="form-group">
+                            <span class="right badge badge-danger"><i class="fas fa-layer-group"></i></span>
+                            <label>ประเภทโอที</label>
+                            <select class="form-control select2" id="dropdown2" style="width: 100%;">
+                                <option selected="selected"></option>
+                                <option>01</option>
+                                @* <option disabled="disabled">California (disabled)</option> *@
+                                <option>02</option>
+                                <option>03</option>
+                            </select>
+                            <span class="text-danger"></span>
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <div class="col-12 col-sm-2">
+                        <div class="form-group">
+                            <span class="right badge badge-danger"><i class="fas fa-people-arrows"></i></span>
+                            <label>จำนวนพนักงาน(คน)</label>
+                            <input type="number" class="form-control" placeholder="To">
+                            <span class="text-danger"></span>
+                        </div>
+                        <!-- /.form-group -->
+                    </div>
+                    <div class="col-12 col-sm-5">
+                        <div class="form-group">
+                            <label>รวมเป็นโอที</label>
+                            <input class="form-control" type="text" value="01:00:00 ชั่วโมง" readonly>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <span class="right badge badge-danger"><i class="fas fa-head-side-cough"></i></span>
+                            <label>ผู้รับผิดชอบทำ (หัวหน้า/ผู้จัดการ)</label>
+                            <select class="form-control select2bs4" style="width: 100%;">
+                                <option selected="selected"></option>
+                                <option>01</option>
+                                @* <option disabled="disabled">California (disabled)</option> *@
+                                <option>02</option>
+                                <option>03</option>
+                            </select>
+                            <span class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <span class="right badge badge-danger"><i class="fas fa-object-group"></i></span>
+                        <label for="">รายละเอียดงานที่สั่งทำโอที</label>
+                        <textarea class="form-control" rows="5" placeholder="หมายเหตุ ..."></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <span class="right badge badge-danger">***</span>
+                            <label>รายชื่อพนักงาน</label>
+                            <div class="card-body  table-responsive p-0">
+                                <table class="table table-bordered table-head-fixed text-wrap">
+                                    <table id="example1" class="table table-bordered">
+                                        <thead class="bg-thead">
+                                            <tr>
+                                                <th style="width: 40px" class="text-center th-font-color">เลือก</th>
+                                                <th style="width: 40px" class="text-center th-font-color">รหัสพนักงาน
+                                                </th>
+                                                <th style="width: 250px" class="text-center th-font-color">ชื่อพนักงาน
+                                                </th>
+                                                <th style="width: 40px" class="text-center th-font-color">เวลาเริ่ม</th>
+                                                <th style="width: 40px" class="text-center th-font-color">เวลาสิ้นสุด
+                                                </th>
+                                                <th style="width: 40px" class="text-center th-font-color">OT(HR)</th>
+                                                <th style="width: 150px" class="text-center th-font-color">ลายเซ็นต์
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @for (int i = 0; i < 10; i++)
+                                            {
+                                                <tr>
+                                                    <td class="text-center">1</td>
+                                                    <td>C00011</td>
+                                                    <td>นาย สุนทร อักษร</td>
+                                                    <td>17:00</td>
+                                                    <td>18:00</td>
+                                                    <td>01:00</td>
+                                                    <td></td>
+                                                </tr>
+                                            }
+                                        </tbody>
+
+                                    </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for=""></label>
+                            <button type="button" class="btn btn-block btn-success">บันทึก</button>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for=""></label>
+                            @* <button type="button" class="btn btn-block btn-info"
+                                onclick="window.print()">ยกเลิก</button> *@
+                            <a asp-action="Index" asp-controller="CreateOT" type="button"
+                                class="btn btn-block btn-danger">ยกเลิก</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
+    integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
+    crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+    integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+    crossorigin="anonymous" />
+<style>
+    
+    .select2-selection__rendered {
+        line-height: 29px !important;
+        
+    }
+
+    .select2-container .select2-selection--single {
+        height: 35px !important;
+        width: 100%;
+    }
+
+    .select2-selection__arrow {
+        height: 34px !important;
+    }
+</style>
+<script>
+    $("#dropdown").select2({
+    });
+     $("#dropdown1").select2({
+    });
+     $("#dropdown2").select2({
+    });
+
+</script>

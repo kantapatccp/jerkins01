@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "XNCU7IIz/0HGI2DA0g6+SbhGlXXrjfoYEWfIBsiZ7V4ppMyw62ndv7FQZWd7ftEu2d7PhHcRqc5u0x3MvmDuUQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\praphassorn.c\\Desktop\\OTWeb\\MVC-OT\\MVC-OT.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\praphassorn.c\\.nuget\\packages\\aspnetcorehero.toastnotification\\1.1.0\\aspnetcorehero.toastnotification.1.1.0.nupkg.sha512",
+    "C:\\Users\\praphassorn.c\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
